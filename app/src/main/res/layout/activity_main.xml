@@ -13,6 +13,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
+        android:background="@drawable/fondo"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -35,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20px"
-            android:background="@android:color/holo_blue_light"
+            android:background="@color/common_google_signin_btn_text_light_pressed"
             android:text="Lugares Turisticos"
             android:textColor="@android:color/background_light" />
 
