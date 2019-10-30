@@ -26,8 +26,9 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="305dp"
-                android:layout_margin="20px"
+                android:layout_height="265dp"
+                android:layout_marginLeft="60px"
+                android:layout_marginRight="60px"
                 app:srcCompat="@drawable/bandera" />
         </LinearLayout>
 
@@ -35,10 +36,46 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20px"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="60px"
             android:background="@color/common_google_signin_btn_text_light_pressed"
-            android:text="Lugares Turisticos"
-            android:textColor="@android:color/background_light" />
+            android:text="Lugares Tipicos"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="60px"
+            android:layout_marginRight="60px"
+            android:background="@color/common_google_signin_btn_text_light_pressed"
+            android:text="Museos"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="60px"
+            android:background="@color/common_google_signin_btn_text_light_pressed"
+            android:text="Estadios"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:background="@color/common_google_signin_btn_text_light_pressed"
+            android:text="Parques"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

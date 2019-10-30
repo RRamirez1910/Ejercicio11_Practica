@@ -1,7 +1,9 @@
 package mapamadrid.maps.google;
 
 import androidx.fragment.app.FragmentActivity;
+
 import android.os.Bundle;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -10,19 +12,20 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps1);
+        setContentView(R.layout.activity_maps3);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -32,19 +35,17 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         LatLng madrid = new LatLng(40.4167047, -3.7035825);
         mMap.addMarker(new MarkerOptions().position(madrid).title("Madrid").snippet("Nos encontramos en la ciudad de Madrid").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
-        LatLng palacio = new LatLng(40.417296, -3.7134063);
-        mMap.addMarker(new MarkerOptions().position(palacio).title("Palacio Real de Madrid").snippet("Nos encontramos en el Palacio Real.").icon(BitmapDescriptorFactory.fromResource(R.drawable.palacio)));
+        LatLng bernabeu = new LatLng(40.45295753795088, -3.688613378424293);
+        mMap.addMarker(new MarkerOptions().position(bernabeu).title("Estadio Santiago Bernabeu").snippet("Estadio del Real Madrid").icon(BitmapDescriptorFactory.fromResource(R.drawable.real)));
 
-        LatLng templo = new LatLng(40.42400720688033, -3.7177202930155886);
-        mMap.addMarker(new MarkerOptions().position(templo).title("Templo de Debod").snippet("Nos encontramos en uno de los lugares más bonitos de madrid.").icon(BitmapDescriptorFactory.fromResource(R.drawable.templo)));
+        LatLng wanda = new LatLng(40.43621, -3.5994827);
+        mMap.addMarker(new MarkerOptions().position(wanda).title("Wanda Metropolitano").snippet("Estadio del Atletico de Madrid").icon(BitmapDescriptorFactory.fromResource(R.drawable.estadio)));
 
-        LatLng ventas = new LatLng(40.43222565972641, -3.66336090565639);
-        mMap.addMarker(new MarkerOptions().position(ventas).title("Plaza de toros 'Las Ventas'").snippet("Nos encontramos en un lugar emblemático de la ciudad de Madrid").icon(BitmapDescriptorFactory.fromResource(R.drawable.plaza)));
+        LatLng getafe = new LatLng(40.3257014, -3.7149348);
+        mMap.addMarker(new MarkerOptions().position(getafe).title("Coliseum Alfonso Pérez").snippet("Estadio del Getafe").icon(BitmapDescriptorFactory.fromResource(R.drawable.estadio)));
 
 
         //Lugar por defecto donde nos sale el puntero(además le añadimos un zoom para que se vea más cerca):
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid,10));
-
-
     }
 }

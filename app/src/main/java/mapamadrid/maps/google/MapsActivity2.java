@@ -1,7 +1,9 @@
 package mapamadrid.maps.google;
 
 import androidx.fragment.app.FragmentActivity;
+
 import android.os.Bundle;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -10,19 +12,20 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps1);
+        setContentView(R.layout.activity_maps2);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -32,19 +35,17 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         LatLng madrid = new LatLng(40.4167047, -3.7035825);
         mMap.addMarker(new MarkerOptions().position(madrid).title("Madrid").snippet("Nos encontramos en la ciudad de Madrid").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
-        LatLng palacio = new LatLng(40.417296, -3.7134063);
-        mMap.addMarker(new MarkerOptions().position(palacio).title("Palacio Real de Madrid").snippet("Nos encontramos en el Palacio Real.").icon(BitmapDescriptorFactory.fromResource(R.drawable.palacio)));
+        LatLng tysen = new LatLng(40.4162159, -3.6949317);
+        mMap.addMarker(new MarkerOptions().position(tysen).title("Museo Thyssen-Bornemisza").snippet("Nos encontramos en el museo Thyssen-Bornemisza.").icon(BitmapDescriptorFactory.fromResource(R.drawable.museo)));
 
-        LatLng templo = new LatLng(40.42400720688033, -3.7177202930155886);
-        mMap.addMarker(new MarkerOptions().position(templo).title("Templo de Debod").snippet("Nos encontramos en uno de los lugares más bonitos de madrid.").icon(BitmapDescriptorFactory.fromResource(R.drawable.templo)));
+        LatLng prado = new LatLng(40.4137994, -3.6920053);
+        mMap.addMarker(new MarkerOptions().position(prado).title("Museo Del Prado").snippet("Nos encontramos en uno de los mejores y más bonitos museos del mundo").icon(BitmapDescriptorFactory.fromResource(R.drawable.museo)));
 
-        LatLng ventas = new LatLng(40.43222565972641, -3.66336090565639);
-        mMap.addMarker(new MarkerOptions().position(ventas).title("Plaza de toros 'Las Ventas'").snippet("Nos encontramos en un lugar emblemático de la ciudad de Madrid").icon(BitmapDescriptorFactory.fromResource(R.drawable.plaza)));
+        LatLng naturales = new LatLng(40.4410362, -3.6897559);
+        mMap.addMarker(new MarkerOptions().position(naturales).title("Museo Nacional de Ciencias Naturales").snippet("Nos encontramos en el Museo Nacional de Ciencias Naturales").icon(BitmapDescriptorFactory.fromResource(R.drawable.museo)));
 
 
         //Lugar por defecto donde nos sale el puntero(además le añadimos un zoom para que se vea más cerca):
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid,10));
-
-
     }
 }
