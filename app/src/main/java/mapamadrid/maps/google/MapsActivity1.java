@@ -45,6 +45,9 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         //Lugar por defecto donde nos sale el puntero(además le añadimos un zoom para que se vea más cerca):
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(madrid,10));
 
+        //Añadir los controles de zoom.
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
 
     }
 }
